@@ -137,3 +137,18 @@ Hinweise:
 - [Clap Doku](https://docs.rs/clap/2.32.0/clap/)
 - [Arg::from_usage](https://docs.rs/clap/2.32.0/clap/struct.Arg.html#method.from_usage)
     erspart viel Tipparbeit
+
+
+## Starten unter Docker
+
+- Docker Image bauen
+
+```console
+> docker build -t my-rust-app .
+```
+
+- Docker Container instanziieren und starten
+
+```console
+> docker run -it --rm --name my-running-app  my-rust-app
+```
