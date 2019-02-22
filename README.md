@@ -31,12 +31,13 @@ Ergänze die Funktion so, dass alle Tests durchlaufen.
 
 Hinweise:
 
+- Der Fehlertyp von T ist zu generisch, um in jedem Fall per `into()` nach
+    Box<dyn Error> konvertiert werden zu können. Fange Fehler von
+    [parse](https://doc.rust-lang.org/std/primitive.str.html#method.parse) per
+    match ab und ersetze sie durch eigene.
 - [find](https://doc.rust-lang.org/std/primitive.str.html#method.find)
-- [from_str](https://doc.rust-lang.org/std/str/trait.FromStr.html#tymethod.from_str)
 - [Slices](https://doc.rust-lang.org/book/ch04-03-slices.html)
 - [match](https://doc.rust-lang.org/book/ch06-02-match.html)
-- Konvertiere im Fehlerfall einen String per `into()` in das Trait-Objekt
-    `Box<dyn Error>`.
 
 Ab diesem Punkt ist das Programm prinzipiell benutzbar. Lasse einen
 Release-Build laufen z.B. mit
